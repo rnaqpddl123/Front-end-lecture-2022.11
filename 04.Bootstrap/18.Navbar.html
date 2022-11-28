@@ -56,11 +56,6 @@
             will be displayed vertically and left-aligned (because of the .navbar-expand-sm class).</p>
     </div>
 
-    <h3>Colored Navbar</h3>
-    <p>Use any of the .bg-color classes to add a background color to the navbar.</p>
-    <p>Tip: Add a white text color to all links in the navbar with the .navbar-dark class, or use the .navbar-light
-        class to add a black text color.</p>
-
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
             <ul class="navbar-nav">
@@ -79,7 +74,13 @@
             </ul>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+
+    <h3>Colored Navbar</h3>
+    <p>Use any of the .bg-color classes to add a background color to the navbar.</p>
+    <p>Tip: Add a white text color to all links in the navbar with the .navbar-dark class, or use the .navbar-light
+        class to add a black text color.</p>
+
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark mt-5">
         <div class="container-fluid">
             <ul class="navbar-nav">
                 <a class="navbar-brand ms-3 me-5" href="#">
@@ -101,6 +102,79 @@
             <span class="nvbar-text me-5">홍길동님 환영합니다</span>
         </div>
     </nav>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark mt-5">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-3 me-5" href="#">
+                <img src="../img/logo.png" alt="Logo" style="height:28px;" class="rounded-pill">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Dropdown</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-3">
+        <h3>Navbar With Dropdown</h3>
+        <p>This example adds a dropdown menu in the navbar.</p>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-success mt-5">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-3 me-5" href="#">
+                <img src="../img/logo.png" alt="Logo" style="height:28px;" class="rounded-pill">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Link</a>
+                    </li>
+                </ul>
+                <form class="d-flex me-3">
+                    <input class="form-control me-2" type="text" placeholder="검색할 주제">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-3">
+        <h3>Navbar Forms</h3>
+        <p>You can also include forms inside the navigation bar.</p>
+    </div>
+
+    <div class="container" style="height: 500px;"></div>
 
 </body>
 
