@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성</title>
+    <style>
+        .class1 {color : blue;}
+        .class2 {background-color: bisque;}
+    </style>
+    <script>
+        function addNode() {
+            const h3 = document.createElement('h3');
+            h3.classList.add('class1', 'class2');        // class="class1 class2"와 동일
+            const textNode = document.createTextNode('홍길동');
+            h3.appendChild(textNode);
+            document.body.appendChild(h3);
+        }
+        function removeNode() {
+            const h3 = document.querySelector('.class1');
+            document.body.removeChild(h3);
+        }
+        function allRemoveNode() {
+            const h3all = document.querySelectorAll('.class1');
+            for (let a of h3all){
+                document.body.removeChild(a);
+            }
+        }
+    </script>
+</head>
+<body style="margin: 40px;">
+    <h2>당신의 이름은 무엇입니까?</h2>
+    <button onclick="addNode()">응답</button>
+    <button onclick="removeNode()">삭제</button>
+    <button onclick="allRemoveNode()">전체 삭제</button>
+    <hr>
+</body>
+</html>

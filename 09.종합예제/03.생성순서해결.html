@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성순서 해결</title>
+    <script>
+        function handler() {
+            document.querySelector('h1').style.backgroundColor = 'yellow';
+            document.querySelector('h2').style.color = 'red';
+        }
+        /* 해결방법 2 */
+        // window.onload = handler;    // 이벤트 핸들러, ()를 넣으면 안됨
+    </script>
+</head>
+<!-- 해결방법 3, 가장 좋은방법 -->
+<body onload="handler()">   <!-- 이벤트가 발생하면 핸들러를 호출, 여기서는 ()가 있음 -->
+    <h1>Header 1</h1>
+    <h2>Header 2</h2>
+    <!-- 해결방법 1-->
+    <!-- 해결은 할수있지만 좋은 방법은아님, 여러가지를 섞어놓은 방식이라 error이 발생할수있음 -->
+    <!-- <script>
+        document.querySelector('h1').style.backgroundColor = 'yellow';
+        document.querySelector('h2').style.color = 'red';
+    </script> -->
+</body>
+</html>
