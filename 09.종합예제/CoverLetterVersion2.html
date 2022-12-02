@@ -12,29 +12,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-
-        .asd {
-            font-size: 20px;
-        }
-        #navi_top {
-            position: fixed; right: 0px; top: 80%; 
-        }
-        
-    </style>
+    <link rel="stylesheet" href="coverLetter.css">
+    <script src="coverLetter.js"></script>
 </head>
 
 <body data-bs-spy="scroll">
-    
-    <div class="container-fluid p-5 bg-dark text-white text-center">
-        <h1>자기소개서</h1>
-        <p>정주영</p>
-    </div>
+    <button onclick="titleChange()" id="titlebtn" class="container-fluid p-5 bg-dark text-white text-center">
+        <div>
+            <h1>자기소개서</h1>
+            <p>정주영</p>
+        </div>
+    </button>
 
     <nav class="navbar bg-dark navbar-dark" id="navi_top">
         <div class="container">
@@ -59,7 +47,10 @@
         <h2 class="text-white bg-success" id="section1">자기소개</h2>
         <div class="col-4">
             <div class="card" style="width:400px">
-                <img class="card-img-top" src="../img/avatar_man.png" alt="Card image" style="width:100%">
+                <button onclick="imgChange()">
+                    <img id="myImage" class="card-img-top" src="../img/avatar_man.png" alt="Card image"
+                        style="width:100%; height: 400px;">
+                </button>
                 <div class="card-body">
                     <h4 class="card-title">정주영</h4>
                     <p class="card-text">
@@ -79,7 +70,7 @@
                     </a>
                 </div>
                 <div class="col-7">
-                    <p class="asd">현재 관심사는 월드컵이면 다른 나라 경기들은 못보더라도 한국경기는 재밌게 보고있습니다.</p>
+                    <p class="pFontSize">현재 관심사는 월드컵이면 다른 나라 경기들은 못보더라도 한국경기는 재밌게 보고있습니다.</p>
                 </div>
             </div>
             <div class="row border border-top-0 border-dark">
@@ -88,7 +79,7 @@
                     <img src="https://en.pimg.jp/054/228/457/1/54228457.jpg" alt="돈까스" height="250px" width="250px">
                 </div>
                 <div class="col-7">
-                    <p class="asd">가장 좋아하는 음식은 돈까스입니다. 최근에는 일본식 돈까스에 와사비와 소금을 곁들여 먹는것을 배워서 돈까스가 더 좋아졌습니다.</p>
+                    <p class="pFontSize">가장 좋아하는 음식은 돈까스입니다. 최근에는 일본식 돈까스에 와사비와 소금을 곁들여 먹는것을 배워서 돈까스가 더 좋아졌습니다.</p>
                 </div>
             </div>
         </div>
@@ -109,21 +100,24 @@
                 <!-- The slideshow/carousel -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://a.cdn-hotels.com/gdcs/production51/d1999/f9c7e8c2-039c-4b9b-b6cb-53ca9c023571.jpg?impolicy=fcrop&w=1600&h=1066&q=medium" alt="제주도" class="d-block" height="800px">
+                        <img src="https://a.cdn-hotels.com/gdcs/production51/d1999/f9c7e8c2-039c-4b9b-b6cb-53ca9c023571.jpg?impolicy=fcrop&w=1600&h=1066&q=medium"
+                            alt="제주도" class="d-block" height="800px">
                         <div class="carousel-caption">
                             <h3>제주도</h3>
                             <p>고등학교때 한번 가본게 끝이라 천천히 둘러보고싶네요.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://www.ttlnews.com/upload/editor_content_images/1537274478835_editor_image.jpg" alt="하와이" class="d-block" height="800px">
+                        <img src="https://www.ttlnews.com/upload/editor_content_images/1537274478835_editor_image.jpg"
+                            alt="하와이" class="d-block" height="800px">
                         <div class="carousel-caption">
                             <h3>하와이</h3>
                             <p>해외 휴양지의 대표격이라고 생각해서 한번 편하게 둘러보고싶어요.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://krblogkkday.files.wordpress.com/2017/07/e18489e185b3e18482e185a9e1848fe185b3e186afe18485e185b5e186bc.jpg" alt="보라카이" class="d-block" height="800px">
+                        <img src="https://krblogkkday.files.wordpress.com/2017/07/e18489e185b3e18482e185a9e1848fe185b3e186afe18485e185b5e186bc.jpg"
+                            alt="보라카이" class="d-block" height="800px">
                         <div class="carousel-caption">
                             <h3>보라카이</h3>
                             <p>액티비티를 안해봐서 가서 신나게 즐기고 싶어요.</p>
@@ -146,19 +140,25 @@
     <h2 class="mt-3  text-white bg-info" id="section3">취미생활</h2>
     <div class="row">
         <div class="col card">
-            <img class="card-img-top" src="https://w.namu.la/s/ce90137b519416aee1ae6907987da4d6f1f0e95bbee901760371d59fc206e41209429d25280924ed4ae5b0a7097b5f35fe3ef05c9fef17de05410d906c053efcd85f5d5da10ef328721164a01834f0a003c351dd79bffd478f6dd47955105a9e" alt="" height="400px">
+            <img class="card-img-top"
+                src="https://w.namu.la/s/ce90137b519416aee1ae6907987da4d6f1f0e95bbee901760371d59fc206e41209429d25280924ed4ae5b0a7097b5f35fe3ef05c9fef17de05410d906c053efcd85f5d5da10ef328721164a01834f0a003c351dd79bffd478f6dd47955105a9e"
+                alt="" height="400px">
             <div class="card-body">
                 <p class="lead">요 몇년간 가장 많이한 취미할동은 온라인게임입니다. 친구들과 잘 만나지못하는 상황이 되면서 온라인으로 여러게임들을 즐기고있습니다.</p>
             </div>
         </div>
         <div class="col card">
-            <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Billiards_balls.jpg/220px-Billiards_balls.jpg" alt="당구" height="400px">
+            <img class="card-img-top"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Billiards_balls.jpg/220px-Billiards_balls.jpg"
+                alt="당구" height="400px">
             <div class="card-body">
                 <p class="lead">종종 친구들과 만나 이야기도 나눌겸 당구를 치러갑니다.</p>
             </div>
         </div>
         <div class="col card">
-            <img class="card-img-top" src="https://menu.mt.co.kr/moneyweek/thumb/2021/04/29/06/2021042916328038790_1.jpg" alt="농구"  height="400px">
+            <img class="card-img-top"
+                src="https://menu.mt.co.kr/moneyweek/thumb/2021/04/29/06/2021042916328038790_1.jpg" alt="농구"
+                height="400px">
             <div class="card-body">
                 <p class="lead">사실 농구는 요 몇년간 안하긴했는데 코로나가 많이 잠잠해지면 조금씩 해보려고 하고있습니다.</p>
             </div>
@@ -178,12 +178,12 @@
         <div class="mt-5"></div>
         <a
             href="https://event.multicampus.com/multicampusmain/#utm_source=google_pc&utm_medium=kwd&utm_campaign=multi11&utm_content=brand&utm_term=%EB%A9%80%ED%8B%B0%EC%BA%A0%ED%8D%BC%EC%8A%A4">
-            <img src="http://edu.chosun.com/site/data/img_dir/2019/08/01/2019080102092_0.jpg" alt=""
-                style="width: 60%" class="d-flex mx-auto">
+            <img src="http://edu.chosun.com/site/data/img_dir/2019/08/01/2019080102092_0.jpg" alt="" style="width: 60%"
+                class="d-flex mx-auto">
         </a>
     </div>
 
-    
+
 
 </body>
 
