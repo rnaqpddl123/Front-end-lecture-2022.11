@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>jQuery 속성조작</title>
+    <script>
+        $(document).ready(function() {
+            $('<img></img>')
+                .attr('src', 'http://picsum.photos/640/360')
+                .attr('alt', '숲 이미지')
+                .appendTo('body');
+            $('<hr></hr>').appendTo('body');
+            for (let i=0; i<4; i++) {
+                $('<img></img>')
+                    .css('margin', '5px')
+                    .attr('src', 'http://picsum.photos/200/200?q='+i)
+                    .appendTo('body');
+            };
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
