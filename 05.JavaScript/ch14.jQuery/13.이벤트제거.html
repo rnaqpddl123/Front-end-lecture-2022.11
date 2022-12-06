@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>jQuery 이벤트 제거</title>
+    <script>
+        $(document).ready(function(e) {
+            const handler = function(e) {
+                // 새로 생성한 태그에 이벤트 추가
+                $('<h1></h1>')
+                    .text($(this).text())
+                    .click(handler)         // .on('click', handler)와 같은의미
+                    .appendTo('body');
+                
+                // 기존태그에서 이벤트 제거
+                // $(this).off;                // 모든이벤트 제거
+                $(this).off('click');       // 클릭이벤트 제거
+                // $(this).off('click', handler);  
+            };
+            $('h1').click(handler);
+        });
+    </script>
+</head>
+<body style="margin: 40px;">
+    <h1>새로 생긴 헤더에서만 이벤트 발생</h1>
+</body>
+</html>

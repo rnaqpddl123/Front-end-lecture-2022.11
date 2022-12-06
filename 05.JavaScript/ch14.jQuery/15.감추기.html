@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide and Show</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.show').click(function(e) {
+                $('div').show();
+            });
+            $('.hide').click(function(e) {
+                $('div').hide();
+            });
+        });
+    </script>
+</head>
+
+
+<body style="margin: 40px;">
+    <div style="margin-bottom: 20px;">
+        <p>버튼을 누르면 이벤트를 처리합니다.</p>
+        <img src="http://picsum.photos/640/480">
+    </div>
+    <button class="show">블럭 보이기</button>
+    <button class="hide">블럭 감추기</button>
+</body>
+
+</html>

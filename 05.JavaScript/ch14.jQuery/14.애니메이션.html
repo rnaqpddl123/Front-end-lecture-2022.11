@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>jQuery 애니매이션</title>
+    <style>
+        .box {
+            width: 100px; height: 100px; background-color: red; 
+            position: absolute; left: 10px; top: 10px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(e){
+            // left 1000만큼 top500만큼 1000ms동안 움직인다
+            $('.box').click(function(e) {
+                $(this).animate({left:1000, top:500}, 10000, function() {
+                    $('p').text('이동 완료');
+                });
+            });
+        });
+    </script>
+</head>
+<body style="margin: 40px;">
+    <div class="box"></div>
+    <p></p>
+    
+</body>
+</html>
