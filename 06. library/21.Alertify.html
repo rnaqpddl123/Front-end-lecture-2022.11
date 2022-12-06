@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="alertify.js-0.3.11/themes/alertify.core.css">
+    <link rel="stylesheet" href="alertify.js-0.3.11/themes/alertify.default.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+        integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="alertify.js-0.3.11/lib/alertify.min.js"></script>
+
+    <title>Alert 대체</title>
+    <script>
+        function alertFunction() {
+            alertify.alert("메세지");
+        }
+        function confirmFunction() {
+            alertify.confirm("메세지", function (e) {
+                if (e) {
+                    // user clicked "ok"
+                } else {
+                    // user clicked "cancel"
+                }
+            });
+        }
+        function promptFunction() {
+            alertify.prompt("메세지", function (e, str) {
+                // str is the input text
+                if (e) {
+                    // user clicked "ok"
+                } else {
+                    // user clicked "cancel"
+                }
+            }, "Default Value");
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+        <h1>My Bootstrap page</h1>
+        <p>Alert 대체</p>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <button class="btn btn-primary" onclick="alertFunction()">Alert Dialog</button>
+            <button class="btn btn-success" onclick="confirmFunction()">confirm Dialog</button>
+            <button class="btn btn-info" onclick="promptFunction()">prompt Dialog</button>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <script>
+        const data = {
+            labels: [
+                'Eating',
+                'Drinking',
+                'Sleeping',
+                'Designing',
+                'Coding',
+                'Cycling',
+                'Running'
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [65, 59, 90, 81, 56, 55, 40],
+                fill: true,
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgb(255, 99, 132)',
+                pointBackgroundColor: 'rgb(255, 99, 132)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(255, 99, 132)'
+            }, {
+                label: 'My Second Dataset',
+                data: [28, 48, 40, 19, 96, 27, 100],
+                fill: true,
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgb(54, 162, 235)',
+                pointBackgroundColor: 'rgb(54, 162, 235)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(54, 162, 235)'
+            }]
+        };
+        new Chart("myChart", {
+            type: 'radar',
+            data: data,
+            options: {
+                elements: {
+                    line: {
+                        borderWidth: 3
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: "Radar Title",
+                        font: { size: 20 }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
