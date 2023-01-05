@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+    <script>
+       function sub(){  
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+            console.log(num1 + 2);
+
+            let arr = [];
+            // 2,10 넣으니까 무한반복
+            if (num1>num2){
+                while(num2+3 < num1){
+                    num2 += 3;
+                    console.log(num2);
+                }
+            } else{
+                while(num1+3 < num2){
+                    num1 += 3;
+                    console.log(num1);
+                }
+            }
+            arr.push(num1,num2)
+            // let resultNum = num1+num2;
+            document.getElementById("result").innerHTML = arr;
+       }
+       function sub2() {
+            let text1 = document.getElementById('text1').value;
+
+            console.log(text1.split(';'));
+            let arr2 = text1.split(';');
+            arr2.sort();
+            arr2.reverse();
+            document.getElementById("result2").innerHTML = arr2;
+       }
+
+    </script>
+</head>
+<body>
+	<h1>문제 1.1</h1>
+
+    숫자1<input type="number" id="num1">
+    숫자2<input type="number" id="num2">
+    <input type="button" id="sub" onclick="sub()" value="제출"></button>
+    <br>
+    1번 문제 결과 : <p id="result"></p>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <h1>문제 2.2</h1>
+    문자열<input type="text" id="text1">
+    <br><br>
+    예시 : 51900;83000;158000;367500;250000;59200;128500;1304000
+    <br><br>
+    <input type="button" id="sub" onclick="sub2()" value="제출"></button>
+    <br>
+    2번 문제 결과 : <p id="result2"></p>
+
+</body>
+</html>
